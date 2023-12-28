@@ -1,0 +1,98 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+#userInterface{
+    border:  solid black;
+    border-radius: 5px;
+    max-inline-size: 65%;
+    margin-block: 0;
+    margin-inline: auto;
+    display: grid;
+	grid-template-columns: 2em repeat(5,1fr) 2em;
+	grid-template-areas: '. search search search search search .'
+	'. . display display display . .'
+	'. hour hour hour hour hour .';
+}
+
+#locationSearchBox {
+	grid-area: search;
+	margin-block-start: 3em;
+	margin-block-end: 1.7em;
+}
+
+#locationSearchBox > * {
+	box-sizing: border-box;
+	inline-size: 100%;
+	block-size: 3em;
+}
+
+#mainDisplay {
+	grid-area: display;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin-block-end: 3em;
+}
+
+#hourlyForecast {
+	grid-area: hour;
+	display: flex;
+	flex-direction: column;
+}
+
+#hourlyForecast:first-child {
+	margin-bottom: 10em;
+}
+
+#hourlyForecastGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill,20%);
+	text-align: center;
+}
+
+#hourlyForecastGrid > div {
+	display: flex;
+	flex-direction: column;
+}
+

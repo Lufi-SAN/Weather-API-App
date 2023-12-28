@@ -7,6 +7,27 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+    <main id="body">
+        <div id="userInterface">
+            <div id="locationSearchBox"><input type="text" name="locationSearchBox"></div>
+            <div id="mainDisplay">
+                <span>London</span>
+                <span>34&deg;</span>
+                <span>Overcast</span>
+            </div>
+            <div id="hourlyForecast">
+                <div>Hourly Forecast</div>
+                <div id="hourlyForecastGrid">
+                    <div><span>Now</span><span>&#9728;</span><span>34&deg;</span></div>
+                    <div><span>9am</span><span>&#127748;</span><span>56&deg;</span></div>
+                    <div><span>10am</span><span>&#10052;</span><span>21&deg;</span></div>
+                    <div><span>11am</span><span>&#9728;</span><span>67&deg;</span></div>
+                    <div><span>12am</span><span>&#10052;</span><span>34&deg;</span></div>
+                </div>
+            </div>
+            <div id="tenDayForecast"></div>
+        </div>
+    </main>
     <script src="./main.js"></script>
 </body>
 </html>
